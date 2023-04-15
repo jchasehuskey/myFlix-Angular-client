@@ -15,33 +15,73 @@ const apiUrl = 'https://myfavflixdb.herokuapp.com/';
 export class FetchApiDataService {
   constructor(private http: HttpClient) {}
 
-  // Creates a new user // expects a JSON in the request body
-  userRegistration(userDetails: any): Observable<any> {
-    console.log(userDetails);
+    // Making the api call for the user registration endpoint
+  /**
+   * @service POST to an API endpoint to register a user
+   * @param {any} userData
+   * @returns a user object in json format
+   * @function userRegistration
+   */
+   public userRegistration(userData: any): Observable<any> {
     return this.http
-      .post(`${apiUrl}/users`, userDetails)
+      .post(apiUrl + 'users', userData)
       .pipe(catchError(this.handleError));
   }
 
-  // user logs in with username and password, credentials are authenticated
-  userLogin(userDetails: any): Observable<any> {
-    console.log(userDetails);
+  // User login
+  /**
+   * @service POST to an API endpoint to login a user
+   * @param {any} userData
+   * @returns a user object in json format
+   * @function userLogin
+   */
+  public userLogin(userData: any): Observable<any> {
     return this.http
-      .post(`${apiUrl}/login`, userDetails)
+      .post(apiUrl + 'login', userData)
       .pipe(catchError(this.handleError));
   }
+
+  // // Creates a new user // expects a JSON in the request body
+  // userRegistration(userDetails: any): Observable<any> {
+  //   console.log(userDetails);
+  //   return this.http
+  //     .post(`${apiUrl}/users`, userDetails)
+  //     .pipe(catchError(this.handleError));
+  // }
+
+  // // user logs in with username and password, credentials are authenticated
+  // userLogin(userDetails: any): Observable<any> {
+  //   console.log(userDetails);
+  //   return this.http
+  //     .post(`${apiUrl}/login`, userDetails)
+  //     .pipe(catchError(this.handleError));
+  // }
+
 
   // get a JSON object of ALL movies
   getAllMovies(): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http
-      .get(`${apiUrl}/movies`, {
+      .get(apiUrl + 'movies', {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
+
+
+  // get a JSON object of ALL movies
+  // getAllMovies(): Observable<any> {
+  //   const token = localStorage.getItem('token');
+  //   return this.http
+  //     .get(`${apiUrl}/movies`, {
+  //       headers: new HttpHeaders({
+  //         Authorization: 'Bearer ' + token,
+  //       }),
+  //     })
+  //     .pipe(map(this.extractResponseData), catchError(this.handleError));
+  // }
 
   // get a JSON object of a single movie
   getMovie(title: string): Observable<any> {
