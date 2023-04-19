@@ -1,0 +1,105 @@
+
+$backgroundColor: #d38a3099;
+$cardColor: #000;
+$buttonMainColor: #5364f6;
+$textColor: #fff;
+$textSubtitleColor: #cbcaca;
+$boxShadowColor: #4c4c4c;
+
+* {
+  box-sizing: border-box;
+}
+
+.movies-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 15px 15px;
+  // margin: 30px;
+  justify-content: center;
+  background-color: $backgroundColor;
+  padding-block: 30px;
+}
+mat-card {
+  display: flex;
+  flex-direction: column;
+  // height: 50vh;
+  width: 300px;
+  background-color: $cardColor;
+  color: $textColor;
+  flex-shrink: 0;
+  padding:20px;
+}
+
+mat-card-header {
+
+  margin-bottom: 5px;
+
+
+}
+
+app-movie-details .mat-card-header {
+  padding: 0;
+}
+
+.mat-mdc-card-header {
+  padding:none !important;
+}
+
+
+
+mat-card-subtitle {
+  color: $textSubtitleColor;
+}
+img {
+  // height: 70%;
+  // object-fit: contain;
+  width: 100%;
+  height: 24rem;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.icon-button {
+  margin-right:10px;
+  padding: 0px;
+  background-color: #1a1d1a00;
+  border: none;
+}
+mat-icon {
+  margin: 0px !important;
+  color: #fff;
+}
+mat-icon:hover {
+  color: #e91e63;
+}
+
+mat-icon.is-favorite {
+  color: #e91e63;
+}
+mat-icon.is-favorite:hover {
+  color: #fff;
+}
+.mat-mdc-button:not(:disabled) {
+  color: $buttonMainColor;
+}
+
+.detail-box{
+  background-color: #d38930;
+  margin-top:20px;
+  border-radius:9px;
+}
+
+.heart{
+  margin-top:20px;
+}
+
+.detail-type{
+  color:#fff !important;
+}
