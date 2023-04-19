@@ -27,7 +27,6 @@ import { GenreComponent } from './genre/genre.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SynopsisComponent } from './synopsis/synopsis.component';
-import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 
 
 
@@ -51,7 +50,6 @@ const appRoutes: Routes = [
     NavbarComponent,
     ProfileComponent,
     SynopsisComponent,
-    FavoriteMoviesComponent
   ],
   imports: [
     BrowserModule,
