@@ -126,7 +126,7 @@ export class MovieCardComponent {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       // we set movies variable to keep what we get as a response from API call
       this.movies = resp;
-      console.log(this.movies);
+      // console.log(this.movies);
       return this.movies;
     });
   }

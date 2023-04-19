@@ -3,6 +3,10 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { GenreComponent } from '../genre/genre.component';
+import { DirectorComponent } from '../director/director.component';
+import { SynopsisComponent } from '../synopsis/synopsis.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-profile',
@@ -42,14 +46,19 @@ export class ProfileComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public router: Router,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    public dialog: MatDialog,
   ) {}
 
   /**
    * This function calls specified methods automatically straight after Component was mounted
    */
   ngOnInit(): void {
+    // this.getUser();
+    this.getFavorites();
     this.getUser();
+ 
+    
   }
 
   /**
@@ -66,6 +75,14 @@ export class ProfileComponent implements OnInit {
       this.updatedUser.Email = this.user.Email;
       this.updatedUser.Birthday = this.user.Birthday;
       return this.user;
+      
+    });
+  }
+
+  getFavorites(): void {
+    this.fetchApiData.getUser().subscribe((resp: any) => {
+      this.favorites = resp.favoriteMovies;
+      console.log(this.favorites);
     });
   }
 
@@ -108,4 +125,63 @@ export class ProfileComponent implements OnInit {
       window.location.reload();
     });
   }
+
+  /**
+   * This function opens dialog with detailed information about specific Genre
+   * @param name of specific Genre (comes from specific movie card)
+   * @param description of specific Genre (comes from specific movie card)
+   */
+   openGenre(name: string, description: string): void {
+    console.log(name);
+    this.dialog.open(GenreComponent, {
+      data: {
+        Name: name,
+        Description: description,
+      },
+    });
+  }
+
+  /**
+   * This function opens dialog with detailed information about specific Director
+   * @param name of specific Director (comes from specific movie card)
+   * @param bio of specific Director (comes from specific movie card)
+   * @param birth of specific Director (comes from specific movie card)
+   */
+  openDirector(name: string, bio: string, birth: string): void {
+    console.log(name);
+    this.dialog.open(DirectorComponent, {
+      data: {
+        Name: name,
+        Bio: bio,
+        Birth: birth,
+      },
+    });
+  }
+
+  /**
+   * his function opens dialog with detailed information about specific Movie
+   * @param title of specific Movie (comes from specific movie card)
+   * @param movieDirector of specific Movie (comes from specific movie card)
+   * @param movieGenre of specific Movie (comes from specific movie card)
+   * @param movieDescription of specific Movie (comes from specific movie card)
+   * @param movieImagePath of specific Movie (comes from specific movie card)
+   */
+  openSynopsis(
+    title: string,
+    movieDirector: string,
+    movieGenre: string,
+    movieDescription: string,
+    movieImagePath: string
+  ): void {
+    this.dialog.open(SynopsisComponent, {
+      data: {
+        Title: title,
+        Director: movieDirector,
+        Genre: movieGenre,
+        Description: movieDescription,
+        Image: movieImagePath,
+      },
+    });
+  }
+
 }
