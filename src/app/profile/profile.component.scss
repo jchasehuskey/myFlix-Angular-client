@@ -5,10 +5,26 @@ $textColor: #fff;
 $textSubtitleColor: #cbcaca;
 $boxShadowColor: #4c4c4c;
 
+
+body {
+  overflow: hidden !important;
+
+}
+
+
 .user-profile {
   flex-direction: column;
   background-color: #000;
   padding-bottom:9rem;
+  background-color: $backgroundColor;
+  background-image: url('../../assets/denver_skyline.jpeg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+
+  overflow: hidden !important;
+
+
 }
 
 .top-container {
@@ -19,6 +35,7 @@ $boxShadowColor: #4c4c4c;
   margin-bottom: 0px;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden !important;
 }
 .delete-button {
   background-color: #e91e63 !important;

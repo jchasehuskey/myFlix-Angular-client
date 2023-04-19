@@ -1,0 +1,62 @@
+$backgroundColor: #ffd8a8;
+$cardColor: #d38a30b1;
+$textColor: #fff;
+$buttonMainColor: #000;
+$boxShadowColor: #4c4c4c;
+
+* {
+  box-sizing: border-box;
+}
+
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px 30px;
+  background-color: $backgroundColor;
+  background-image: url('../../assets/denver_skyline.jpeg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.welcome-card {
+  max-width: 700px;
+  margin: auto;
+  padding: 100px;
+  flex-direction: column;
+  //   border: 2px solid $boxShadowColor;
+  color: $textColor;
+  //   box-shadow: 0px 0px 24px 12px $boxShadowColor;
+  background-color: $cardColor;
+  border-radius:9px;
+}
+.mat-mdc-card-header {
+  padding: 0;
+  margin-bottom: 2vh;
+}
+
+.welcome-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 62px;
+}
+
+.welcome-subtitle {
+  color: $textColor;
+  font-family: "Poppins", sans-serif;
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+    color: $textColor !important;
+  background-color: $buttonMainColor !important;
+}
+
+
+  
+  
