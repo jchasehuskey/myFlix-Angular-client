@@ -33,7 +33,21 @@ TypeDoc
 
 # Screenshots
 
+### Login Page
+
 ![login](src/assets/login.png)
+
+### Home Page
+
+![home](src/assets/home.png)
+
+### User Profile
+
+![profile](src/assets/profile.png)
+
+# User Navigation
+
+![navigation](src/assets/navigation.png)
 
 
 
