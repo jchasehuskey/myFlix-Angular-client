@@ -18,11 +18,11 @@ This project was generated with Angular CLI version 15.1.2.
 * Delete their account
 
 
+---
 
-Links
-Live App: https://jchasehuskey.github.io/myFlix-Angular-client/welcome
+# Live App: https://jchasehuskey.github.io/myFlix-Angular-client/welcome
 
-Technologies Used
+# Technologies Used
 Angular
 Angular Material
 TypeScript
@@ -48,6 +48,16 @@ TypeDoc
 # User Navigation
 
 ![navigation](src/assets/navigation.png)
+
+---
+
+# Tech Specs
+
+* Angular ^15.0.0
+* Angular Material ^15.0.0
+* Node.js/ npm ^16.18.0
+* TypeDoc ^0.23.22
+* Github Pages
 
 
 
