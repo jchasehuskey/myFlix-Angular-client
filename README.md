@@ -43,7 +43,7 @@ TypeDoc
 
 ### User Profile
 
-![profile](src/assets/profile.png)
+![user](src/assets/user.png)
 
 # User Navigation
 
@@ -53,7 +53,7 @@ TypeDoc
 
 # Tech Specs
 
-* Angular ^15.0.0
+* Angular ^15.2.4
 * Angular Material ^15.0.0
 * Node.js/ npm ^16.18.0
 * TypeDoc ^0.23.22
