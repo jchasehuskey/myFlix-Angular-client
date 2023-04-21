@@ -1,5 +1,42 @@
 # MyFlixAngularClient
 
+The client-side of a movie tracking app allowing users to create an account, access information about different movies and save them to their list of favorites. Users can also update their personal information, and delete their account. The API for this application can be found on the movie-api repo.
+
+This project was generated with Angular CLI version 15.1.2.
+
+# Key Features
+* The app displays a welcome view where users can either log in or register an account.
+* Once authenticated, the user navigates to the movies view which displays all movie cards.
+* Each movie card contains the following:
+* A "Genre" button, opening a dialog with details about the genre of that movie
+* A "Director" button, opening a dialog with details about the director of that movie
+* A "Summary" button, opening a dialog with a summary of that movie
+* A "Favorite" button, toggling between adding and removing the movie to/from favorite list
+* The title and image of the movie
+* The user can navigate to the profile view where they can:
+* Update their information
+* Delete their account
+
+
+
+Links
+Live App: https://jchasehuskey.github.io/myFlix-Angular-client/welcome
+
+Technologies Used
+Angular
+Angular Material
+TypeScript
+TypeDoc
+
+
+---
+
+# Screenshots
+
+![login](src/assets/login.png)
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
