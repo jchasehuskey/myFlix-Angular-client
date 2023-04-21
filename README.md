@@ -22,11 +22,14 @@ This project was generated with Angular CLI version 15.1.2.
 
 # Live App: https://jchasehuskey.github.io/myFlix-Angular-client/welcome
 
-# Technologies Used
-Angular
-Angular Material
-TypeScript
-TypeDoc
+# Tech Specs
+
+* Angular ^15.2.4
+* Angular Material ^15.0.0
+* Node.js/ npm ^16.18.0
+* TypeDoc ^0.23.22
+* Github Pages
+
 
 
 ---
@@ -50,14 +53,6 @@ TypeDoc
 ![navigation](src/assets/navigation.png)
 
 ---
-
-# Tech Specs
-
-* Angular ^15.2.4
-* Angular Material ^15.0.0
-* Node.js/ npm ^16.18.0
-* TypeDoc ^0.23.22
-* Github Pages
 
 
 
