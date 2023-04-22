@@ -1,6 +1,6 @@
 # MyFlixAngularClient
 
-The client-side of a movie tracking app allowing users to create an account, access information about different movies and save them to their list of favorites. Users can also update their personal information, and delete their account. The API for this application can be found on the movie-api repo.
+The client-side of a movie tracking app allowing users to create an account, access information about different movies and save them to their list of favorites. Users can also update their personal information, and delete their account. 
 
 This project was generated with Angular CLI version 15.1.2.
 
@@ -17,6 +17,8 @@ This project was generated with Angular CLI version 15.1.2.
 * Update their information
 * Delete their account
 
+
+The API for this application can be found on the movie_API repo.
 
 ---
 
